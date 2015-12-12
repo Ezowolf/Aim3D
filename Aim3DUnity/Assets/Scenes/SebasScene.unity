@@ -159,7 +159,7 @@ GameObject:
   - 54: {fileID: 244638542}
   - 114: {fileID: 244638543}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: TestPlayerCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,9 @@ MonoBehaviour:
   whatToSpawnInt: 0
   yourObjectArray:
   - {fileID: 182942, guid: 85d8a65bc887d1a40a478293eb6d0f6b, type: 2}
-  zAxisDistance: 9
+  maxYPos: 20
+  minYPos: 5
+  dragSpeed: 1
 --- !u!92 &322631273
 Behaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +313,7 @@ Camera:
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: .5
+    x: 0
     y: 0
     width: .5
     height: 1
@@ -472,7 +474,7 @@ Camera:
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: .5
     y: 0
     width: .5
     height: 1
