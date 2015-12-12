@@ -19,19 +19,28 @@ public class MousePlayer: MonoBehaviour
     [SerializeField]
     private float minYPos;
 
+	[SerializeField]
+	private float maxXPos;
+	[SerializeField]
+	private float minXPos;
+
+	[SerializeField]
+	private float maxZPos;
+	[SerializeField]
+	private float minZPos;
+
+
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
-
-    // Use this for initialization
+	
     void Start()
     {
         camera = GetComponent<Camera>();
     }
-
-    // Update is called once per frame
+	
     void Update()
     {
-        zAxisDistance = this.transform.position.y - 1;
+		zAxisDistance = this.transform.position.y - yourObjectArray[whatToSpawnInt].transform.localScale.y;
         if (Input.GetButtonDown("Fire1"))
         {
             var mousePos = Input.mousePosition;
@@ -66,7 +75,7 @@ public class MousePlayer: MonoBehaviour
         {
             transform.Translate((Vector3.up * Time.deltaTime) * 160 * Input.GetAxis("Mouse ScrollWheel"), Space.World);
         }
-        Debug.Log(Input.mousePosition);
+
         MouseCameraMovement();
     }
 
