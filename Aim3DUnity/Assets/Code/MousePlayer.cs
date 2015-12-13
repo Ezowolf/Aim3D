@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MousePlayer: MonoBehaviour
 {
+
     private Camera camera;
 
     public int whatToSpawnInt;

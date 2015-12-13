@@ -8,21 +8,18 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float jumpForce = 250;
 
-
+    private bool canIJump = false;
 
     // Use this for initialization
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMove();
-
-
     }
 
     void PlayerMove()
@@ -33,11 +30,22 @@ public class PlayerMovement : MonoBehaviour
         rotation *= Time.deltaTime;
         transform.Translate(0, 0, translation);
         transform.Rotate(0, rotation, 0);
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump")&&canIJump)
         {
-            rb.AddForce(transform.up * jumpForce);
+            if (Physics.Raycast(transform.position, -Vector3.up, 1 + 0.1F) == true)
+            {
+                rb.AddForce(transform.up * jumpForce);
+            }
         }
     }
 
+    void OnTriggerEnter(Collider coll)
+    {
+        if(coll.gameObject.tag=="JumpingPickup")
+        {
+            canIJump = true;
+            Destroy(coll.gameObject);
+        }
+    }
 
 }
