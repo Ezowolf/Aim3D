@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SpawnedObject
   - JumpingPickup
+  - Bullet
   layers:
   - Default
   - TransparentFX

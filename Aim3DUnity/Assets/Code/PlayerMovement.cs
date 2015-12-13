@@ -3,9 +3,12 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10.0F;
-    public float rotationSpeed = 100.0F;
+    [SerializeField]
+    private float speed = 10.0F;
+    [SerializeField]
+    private float rotationSpeed = 100.0F;
     private Rigidbody rb;
+    [SerializeField]
     private float jumpForce = 250;
 
     private bool canIJump = false;
