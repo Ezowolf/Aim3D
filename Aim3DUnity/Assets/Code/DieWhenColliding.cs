@@ -28,6 +28,7 @@ public class DieWhenColliding : MonoBehaviour {
 			healthScript.health--;
 			if(destroyAfterColliding)
 			Destroy(coll.gameObject);
+
 		}
 	}
 }

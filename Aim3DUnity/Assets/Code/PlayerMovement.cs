@@ -44,11 +44,10 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if(coll.gameObject.tag=="JumpingPickup")
-        {
-            canIJump = true;
-            Destroy(coll.gameObject);
-        }
-    }
+		if (coll.gameObject.tag == "JumpingPickup") {
+			canIJump = true;
+			Destroy (coll.gameObject);
 
+		}
+	}
 }

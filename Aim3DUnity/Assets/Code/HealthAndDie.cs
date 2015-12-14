@@ -4,6 +4,9 @@ using System.Collections;
 public class HealthAndDie : MonoBehaviour {
 
     public int health = 10;
+
+	private bool died = false;
+	public GameObject LooseText;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,6 +17,7 @@ public class HealthAndDie : MonoBehaviour {
 	    if(health<=0)
         {
             Destroy(this.gameObject);
+			LooseText.SetActive(true);
         }
 	}
 }
