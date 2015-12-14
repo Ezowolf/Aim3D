@@ -42,7 +42,7 @@ public class MousePlayer: MonoBehaviour
     void Update()
     {
 		zAxisDistance = this.transform.position.y - yourObjectArray[whatToSpawnInt].transform.localScale.y;
-        if (Input.GetButtonDown("Fire1"))
+		if (Input.GetMouseButtonDown(0))
         {
             var mousePos = Input.mousePosition;
             mousePos.z = zAxisDistance;
