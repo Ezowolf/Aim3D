@@ -3,8 +3,8 @@ using System.Collections;
 
 public class MoveForward : MonoBehaviour {
 
-    [SerializeField]
-    private float moveSpeed = 1;
+    
+	public float moveSpeed = 1;
 
 	// Use this for initialization
 	void Start () {
