@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RotateTowardsTransform : MonoBehaviour {
 	[SerializeField]
-	private Transform transformToFollow;
+	private GameObject transformToFollow;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +12,6 @@ public class RotateTowardsTransform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.LookAt(transformToFollow);
+		this.transform.LookAt(transformToFollow.transform);
 	}
 }

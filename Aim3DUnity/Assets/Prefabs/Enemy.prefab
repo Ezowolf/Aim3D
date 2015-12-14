@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73e2e3ae7b1104b43be85bc5a2f7ad4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transformToFollow: {fileID: 0}
+  transformToFollow: {fileID: 186234, guid: 1665db7caa0d141afb48fa6a29d8eab6, type: 2}
 --- !u!114 &11471768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -151,7 +151,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: transformToFollow
+      value: 
+      objectReference: {fileID: 186234, guid: 1665db7caa0d141afb48fa6a29d8eab6, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160308}

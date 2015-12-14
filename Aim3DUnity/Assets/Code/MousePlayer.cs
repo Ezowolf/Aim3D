@@ -30,7 +30,6 @@ public class MousePlayer: MonoBehaviour
 	[SerializeField]
 	private float minZPos;
 
-
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
 	
@@ -51,7 +50,7 @@ public class MousePlayer: MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit, 100))
             {
-                if (hit.transform.gameObject.tag == "SpawnedObject")
+				if (hit.transform.gameObject.tag == "SpawnedObject"|| hit.transform.gameObject.tag == "UserInterface")
                 {
                     ableToPlaceBlocks = false;
                 }
