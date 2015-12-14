@@ -3,8 +3,7 @@ using System.Collections;
 
 public class HealthAndDie : MonoBehaviour {
 
-    [SerializeField]
-    private int health = 10;
+    public int health = 10;
 	// Use this for initialization
 	void Start () {
 	
