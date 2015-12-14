@@ -231,6 +231,14 @@ Prefab:
       propertyPath: transformToFollow
       value: 
       objectReference: {fileID: 244638541}
+    - target: {fileID: 13605520, guid: 73f725b4f0f0b49e2a80a8038d2480c7, type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 160308, guid: 73f725b4f0f0b49e2a80a8038d2480c7, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73f725b4f0f0b49e2a80a8038d2480c7, type: 2}
   m_IsPrefabParent: 0
@@ -249,9 +257,10 @@ GameObject:
   - 114: {fileID: 244638543}
   - 114: {fileID: 244638544}
   - 114: {fileID: 244638545}
+  - 114: {fileID: 244638546}
   m_Layer: 0
   m_Name: TestPlayerCube
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c06d9b19f30fa648a4b547faede0af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 5
 --- !u!114 &244638545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +377,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletToFire: {fileID: 153196, guid: 0f0e828390bb62a4c8d43e769e858a78, type: 2}
   shootingInterval: 1
+--- !u!114 &244638546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 244638537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65b60949828244a2ba9c7867acbfe7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whatTagKillsMe: Enemy
+  destroyAfterColliding: 0
 --- !u!1 &322631271
 GameObject:
   m_ObjectHideFlags: 0
@@ -468,6 +490,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!1 &591295227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 591295228}
+  - 136: {fileID: 591295229}
+  m_Layer: 0
+  m_Name: EnemyHurtBox
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &591295228
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591295227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.18, y: 1.17, z: 1.16}
+  m_Children: []
+  m_Father: {fileID: 2101027016}
+  m_RootOrder: 0
+--- !u!136 &591295229
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 591295227}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &783109493
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,3 +693,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 244638541}
   m_RootOrder: 0
+--- !u!4 &2101027016 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 463516, guid: 73f725b4f0f0b49e2a80a8038d2480c7, type: 2}
+  m_PrefabInternal: {fileID: 61868050}
