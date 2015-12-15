@@ -12,8 +12,7 @@ public class EnemyShoot : MonoBehaviour {
 
 	[SerializeField]
 	private float shootingInterval = 1;
-
-	// Update is called once per frame
+	
 	void Update () {
 		if(amIInRange)
 		{

@@ -10,7 +10,6 @@ public class ShootBullet : MonoBehaviour {
     [SerializeField]
     private float shootingInterval = 1;
 
-
 	// Use this for initialization
 	void Start () {
 	

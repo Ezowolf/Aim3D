@@ -17,7 +17,11 @@ GameObject:
   - 114: {fileID: 11487122}
   - 114: {fileID: 11471768}
   - 114: {fileID: 11487412}
+<<<<<<< Updated upstream
   - 114: {fileID: 11461790}
+=======
+  - 114: {fileID: 11475468}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -32,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 160308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.565729, y: 1.05, z: 19.21}
+  m_LocalPosition: {x: 10.5657291, y: 1.04999995, z: 19.2099991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +62,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -79,7 +83,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -124,6 +128,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   LooseText: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!114 &11475468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711dd4cb8c35c42db936f6a5b7607551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletToFire: {fileID: 121938, guid: dfe208fe4d5bc4a729f994ca6a067fd3, type: 2}
+  amIInRange: 1
+  shootingInterval: 1
+>>>>>>> Stashed changes
 --- !u!114 &11487122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +191,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: .5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -193,6 +214,13 @@ Prefab:
       propertyPath: bulletToFire
       value: 
       objectReference: {fileID: 121938, guid: dfe208fe4d5bc4a729f994ca6a067fd3, type: 2}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 0}
+      propertyPath: amIInRange
+      value: 1
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160308}

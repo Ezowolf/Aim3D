@@ -35,6 +35,10 @@ public class StopWithDistance : MonoBehaviour {
 			stopThis.moveSpeed = originalSpeed;
 			shootScript.amIInRange = false;
 		}
+<<<<<<< Updated upstream
 		}
 }
+=======
+	}
+>>>>>>> Stashed changes
 }
