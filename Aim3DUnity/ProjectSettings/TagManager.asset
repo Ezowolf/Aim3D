@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - SpawnedObject
+  - JumpingPickup
+  - Floor
   layers:
   - Default
   - TransparentFX

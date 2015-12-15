@@ -32,10 +32,13 @@ public class MousePlayer: MonoBehaviour
 
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
+
+	private GameObject floorObj;
 	
     void Start()
     {
         camera = GetComponent<Camera>();
+		floorObj = GameObject.Find("Floor");
     }
 	
     void Update()
