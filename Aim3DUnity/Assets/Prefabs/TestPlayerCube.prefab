@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   whatTagKillsMe: Enemy
-  destroyAfterColliding: 0
+  destroyAfterColliding: 1
 --- !u!114 &11460402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  LooseText: {fileID: 0}
 --- !u!124 &12447902
 Behaviour:
   m_ObjectHideFlags: 1

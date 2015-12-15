@@ -17,6 +17,7 @@ public class HealthAndDie : MonoBehaviour {
 	    if(health<=0)
         {
             Destroy(this.gameObject);
+			if(this.gameObject.tag == "player")
 			LooseText.SetActive(true);
         }
 	}

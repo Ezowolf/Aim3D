@@ -23,6 +23,8 @@ public class StopWithDistance : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(transformToFollow!=null)
+		{
 		if(Vector3.Distance(this.transform.position,transformToFollow.transform.position)<=distanceToStopAt)
 		{
 			stopThis.moveSpeed = 0;
@@ -32,6 +34,7 @@ public class StopWithDistance : MonoBehaviour {
 		{
 			stopThis.moveSpeed = originalSpeed;
 			shootScript.amIInRange = false;
+		}
 		}
 }
 }
