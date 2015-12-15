@@ -22,6 +22,7 @@ public class WinPickup : MonoBehaviour {
 
 	public void IfActive (){
 		if(winner == true){
+
  			WinText.SetActive(true);
 		}
 	}

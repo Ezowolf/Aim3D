@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Timer : HealthAndDie {
 
-	float timeLeft = 8.0f;
+	public float timeLeft = 8.0f;
 	
 	void Update()
 	{

@@ -5,10 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Bullet
-  - SpawnedObject
-  - JumpingPickup
-  - Floor
+  - Player
   layers:
   - Default
   - TransparentFX
