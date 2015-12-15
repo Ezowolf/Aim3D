@@ -8,8 +8,7 @@ public class MousePlayer: MonoBehaviour
 
     public int whatToSpawnInt;
 
-    [SerializeField]
-    private GameObject[] yourObjectArray;
+	public GameObject[] yourObjectArray;
 
     private float zAxisDistance = 10f;
 
@@ -43,7 +42,7 @@ public class MousePlayer: MonoBehaviour
 	
     void Update()
     {
-		zAxisDistance = this.transform.position.y - yourObjectArray[whatToSpawnInt].transform.localScale.y;
+		/*zAxisDistance = this.transform.position.y - yourObjectArray[whatToSpawnInt].transform.localScale.y;
 		if (Input.GetMouseButtonDown(0))
         {
             var mousePos = Input.mousePosition;
@@ -68,7 +67,8 @@ public class MousePlayer: MonoBehaviour
             }
             if (ableToPlaceBlocks)
                 Instantiate(yourObjectArray[whatToSpawnInt], objectPos, Quaternion.identity);
-        }
+        }*/
+		
         if ((Input.GetAxis("Mouse ScrollWheel") > 0)&& this.transform.position.y < maxYPos)
         {
             transform.Translate((Vector3.up * Time.deltaTime)* 160 * Input.GetAxis("Mouse ScrollWheel") , Space.World);
