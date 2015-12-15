@@ -25,20 +25,16 @@ public class StopWithDistance : MonoBehaviour {
 	void Update () {
 		if(transformToFollow!=null)
 		{
-		if(Vector3.Distance(this.transform.position,transformToFollow.transform.position)<=distanceToStopAt)
-		{
-			stopThis.moveSpeed = 0;
-			shootScript.amIInRange = true;
+			if(Vector3.Distance(this.transform.position,transformToFollow.transform.position)<=distanceToStopAt)
+			{
+				stopThis.moveSpeed = 0;
+				shootScript.amIInRange = true;
+			}
+			else
+			{
+				stopThis.moveSpeed = originalSpeed;
+				shootScript.amIInRange = false;
+			}
 		}
-		else
-		{
-			stopThis.moveSpeed = originalSpeed;
-			shootScript.amIInRange = false;
-		}
-<<<<<<< Updated upstream
-		}
-}
-=======
 	}
->>>>>>> Stashed changes
 }
