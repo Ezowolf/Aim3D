@@ -44,7 +44,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0e572e74e8caf43fca111e2ddf972b49, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aefd8b4bcec62e4ba3e63dcffe7d98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howManySeconds: 60
+  howManySeconds: 999
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -161,7 +161,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: howManySeconds
-      value: 60
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: whatTagKillsMe
@@ -175,6 +175,10 @@ Prefab:
       propertyPath: health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e572e74e8caf43fca111e2ddf972b49, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 182942}

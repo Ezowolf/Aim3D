@@ -28,7 +28,7 @@ public class TileClicker : MonoBehaviour {
 
 	void OnCollisionEnter(Collision coll)
 	{
-		if(coll.gameObject.tag=="player")
+		if(coll.gameObject.tag=="Player")
 		{
 			isPlayerOnMe = true;
 		}
@@ -36,7 +36,7 @@ public class TileClicker : MonoBehaviour {
 
 	void OnCollisionLeave(Collision coll)
 	{
-		if(coll.gameObject.tag=="player")
+		if(coll.gameObject.tag=="Player")
 		{
 			isPlayerOnMe = false;
 		}

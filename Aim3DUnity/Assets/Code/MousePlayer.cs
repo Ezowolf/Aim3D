@@ -10,8 +10,6 @@ public class MousePlayer: MonoBehaviour
 
 	public GameObject[] yourObjectArray;
 
-    private float zAxisDistance = 10f;
-
     private bool ableToPlaceBlocks = true;
 
     [SerializeField]
@@ -39,6 +37,11 @@ public class MousePlayer: MonoBehaviour
         camera = GetComponent<Camera>();
 		floorObj = GameObject.Find("Floor");
     }
+
+	public void ChangeMySelection(int whatSelection)
+	{
+		whatToSpawnInt = whatSelection;
+	}
 	
     void Update()
     {
