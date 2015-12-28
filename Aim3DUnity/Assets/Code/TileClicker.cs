@@ -22,13 +22,13 @@ public class TileClicker : MonoBehaviour {
 		if(haveISpawned==false&&isPlayerOnMe==false)
 		{
 			haveISpawned=true;
-			Instantiate(objectsISpawn[secondPlayerScript.whatToSpawnInt],new Vector3(this.transform.position.x,this.transform.position.y+objectsISpawn[secondPlayerScript.whatToSpawnInt].transform.localScale.y,this.transform.position.z),Quaternion.identity);
+			Instantiate(objectsISpawn[secondPlayerScript.whatToSpawnInt],new Vector3(this.transform.position.x,(this.transform.position.y+objectsISpawn[secondPlayerScript.whatToSpawnInt].transform.localScale.y+this.transform.localScale.y),this.transform.position.z),Quaternion.identity);
 		}
 	}
 
 	void OnCollisionEnter(Collision coll)
 	{
-		if(coll.gameObject.tag=="Player")
+		if(coll.gameObject.tag=="Player"||coll.gameObject.tag=="Enemy")
 		{
 			isPlayerOnMe = true;
 		}
@@ -36,9 +36,6 @@ public class TileClicker : MonoBehaviour {
 
 	void OnCollisionLeave(Collision coll)
 	{
-		if(coll.gameObject.tag=="Player")
-		{
-			isPlayerOnMe = false;
-		}
+		isPlayerOnMe = false;
 	}
 }
