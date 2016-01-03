@@ -27,12 +27,18 @@ public class StopWithDistance : MonoBehaviour {
 		{
 			if(Vector3.Distance(this.transform.position,transformToFollow.transform.position)<=distanceToStopAt)
 			{
-				stopThis.moveSpeed = 0;
+				if (stopThis != null) 
+				{
+					stopThis.moveSpeed = 0;
+				}
 				shootScript.amIInRange = true;
 			}
 			else
 			{
-				stopThis.moveSpeed = originalSpeed;
+				if (stopThis != null) 
+				{
+					stopThis.moveSpeed = originalSpeed;
+				}
 				shootScript.amIInRange = false;
 			}
 		}

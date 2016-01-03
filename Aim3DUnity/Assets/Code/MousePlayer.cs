@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MousePlayer: MonoBehaviour
 {
-
+	public Text buildPointText;
     private Camera camera;
 
     public int whatToSpawnInt;
@@ -13,6 +14,9 @@ public class MousePlayer: MonoBehaviour
 	public int[] buildingCosts;
 
 	public int myBuildingPoints = 50;
+
+	[SerializeField]
+	private int buildingPointsMax = 100;
 
     private bool ableToPlaceBlocks = true;
 
@@ -59,8 +63,14 @@ public class MousePlayer: MonoBehaviour
         {
             transform.Translate((Vector3.up * Time.deltaTime) * 160 * Input.GetAxis("Mouse ScrollWheel"), Space.World);
         }
-
         MouseCameraMovement();
+		myBuildingPoints++;
+		if (myBuildingPoints > buildingPointsMax) 
+		{
+			myBuildingPoints = buildingPointsMax;
+		}
+		buildPointText.text = "BP: " + myBuildingPoints;
+
     }
 
     void MouseCameraMovement()

@@ -13,11 +13,10 @@ GameObject:
   - 23: {fileID: 2365146}
   - 114: {fileID: 11453836}
   - 54: {fileID: 5461884}
-  - 114: {fileID: 11440758}
   - 114: {fileID: 11470052}
   - 114: {fileID: 11453478}
-  - 114: {fileID: 11490414}
   - 114: {fileID: 11470740}
+  - 114: {fileID: 11428296}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -32,7 +31,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100192}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.01643753, y: .0500000007, z: -.212221742}
+  m_LocalPosition: {x: 9.016438, y: 0.05, z: -0.21222174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -58,7 +57,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -79,13 +78,13 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &11440758
+--- !u!114 &11428296
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,10 +92,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 100192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aee2f430c6c87704799c2f9c31e72cd3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f87b93095ece4b9aac83754587ee8c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6.5
+  distanceToStopAt: 9
 --- !u!114 &11453478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,20 +146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletToFire: {fileID: 121938, guid: dfe208fe4d5bc4a729f994ca6a067fd3, type: 2}
-  amIInRange: 1
+  amIInRange: 0
   shootingInterval: 1
---- !u!114 &11490414
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f87b93095ece4b9aac83754587ee8c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceToStopAt: 6
 --- !u!136 &13634706
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -170,7 +157,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -180,7 +167,15 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: amIInRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: distanceToStopAt
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100192}
