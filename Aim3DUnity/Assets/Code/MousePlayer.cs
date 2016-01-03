@@ -10,6 +10,10 @@ public class MousePlayer: MonoBehaviour
 
 	public GameObject[] yourObjectArray;
 
+	public int[] buildingCosts;
+
+	public int myBuildingPoints = 50;
+
     private bool ableToPlaceBlocks = true;
 
     [SerializeField]
@@ -45,33 +49,7 @@ public class MousePlayer: MonoBehaviour
 	
     void Update()
     {
-		/*zAxisDistance = this.transform.position.y - yourObjectArray[whatToSpawnInt].transform.localScale.y;
-		if (Input.GetMouseButtonDown(0))
-        {
-            var mousePos = Input.mousePosition;
-            mousePos.z = zAxisDistance;
-            Vector3 objectPos = camera.ScreenToWorldPoint(mousePos);
-            Ray ray = camera.ScreenPointToRay(mousePos);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-				if (hit.transform.gameObject.tag == "SpawnedObject"|| hit.transform.gameObject.tag == "UserInterface")
-                {
-                    ableToPlaceBlocks = false;
-                }
-                else
-                {
-                    ableToPlaceBlocks = true;
-                }
-            }
-            if(mousePos.x>Screen.width/2)
-            {
-                ableToPlaceBlocks = false;
-            }
-            if (ableToPlaceBlocks)
-                Instantiate(yourObjectArray[whatToSpawnInt], objectPos, Quaternion.identity);
-        }*/
-		
+		Debug.Log (myBuildingPoints);
         if ((Input.GetAxis("Mouse ScrollWheel") > 0)&& this.transform.position.y < maxYPos)
         {
             transform.Translate((Vector3.up * Time.deltaTime)* 160 * Input.GetAxis("Mouse ScrollWheel") , Space.World);

@@ -19,8 +19,9 @@ public class TileClicker : MonoBehaviour {
 	
 	void OnMouseUp()
 	{
-		if(haveISpawned==false&&isPlayerOnMe==false)
+		if(haveISpawned==false&&isPlayerOnMe==false&&secondPlayerScript.myBuildingPoints>=secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt])
 		{
+			secondPlayerScript.myBuildingPoints = secondPlayerScript.myBuildingPoints - secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt];
 			haveISpawned=true;
 			Instantiate(objectsISpawn[secondPlayerScript.whatToSpawnInt],new Vector3(this.transform.position.x,(this.transform.position.y+objectsISpawn[secondPlayerScript.whatToSpawnInt].transform.localScale.y+this.transform.localScale.y),this.transform.position.z),Quaternion.identity);
 		}
