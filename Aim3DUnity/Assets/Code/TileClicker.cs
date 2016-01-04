@@ -4,7 +4,7 @@ using System.Collections;
 public class TileClicker : MonoBehaviour {
 
 	private bool haveISpawned = false;
-	private bool isPlayerOnMe = false;
+	private bool isCharacterOnMe = false;
 
 	private GameObject[] objectsISpawn;
 	private GameObject playerTwo;
@@ -19,7 +19,7 @@ public class TileClicker : MonoBehaviour {
 	
 	void OnMouseUp()
 	{
-		if(haveISpawned==false&&isPlayerOnMe==false&&secondPlayerScript.myBuildingPoints>=secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt])
+		if(haveISpawned==false&&isCharacterOnMe==false&&secondPlayerScript.myBuildingPoints>=secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt])
 		{
 			secondPlayerScript.myBuildingPoints = secondPlayerScript.myBuildingPoints - secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt];
 			haveISpawned=true;
@@ -31,12 +31,15 @@ public class TileClicker : MonoBehaviour {
 	{
 		if(coll.gameObject.tag=="Player"||coll.gameObject.tag=="Enemy")
 		{
-			isPlayerOnMe = true;
+			isCharacterOnMe = true;
 		}
 	}
 
-	void OnCollisionLeave(Collision coll)
+	void OnCollisionExit(Collision coll)
 	{
-		isPlayerOnMe = false;
+		if (coll.gameObject.tag == "Player" || coll.gameObject.tag == "Enemy") 
+		{
+			isCharacterOnMe = false;
+		}
 	}
 }

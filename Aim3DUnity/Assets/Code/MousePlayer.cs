@@ -53,7 +53,6 @@ public class MousePlayer: MonoBehaviour
 	
     void Update()
     {
-		Debug.Log (myBuildingPoints);
         if ((Input.GetAxis("Mouse ScrollWheel") > 0)&& this.transform.position.y < maxYPos)
         {
             transform.Translate((Vector3.up * Time.deltaTime)* 160 * Input.GetAxis("Mouse ScrollWheel") , Space.World);
@@ -64,7 +63,6 @@ public class MousePlayer: MonoBehaviour
             transform.Translate((Vector3.up * Time.deltaTime) * 160 * Input.GetAxis("Mouse ScrollWheel"), Space.World);
         }
         MouseCameraMovement();
-		myBuildingPoints++;
 		if (myBuildingPoints > buildingPointsMax) 
 		{
 			myBuildingPoints = buildingPointsMax;
