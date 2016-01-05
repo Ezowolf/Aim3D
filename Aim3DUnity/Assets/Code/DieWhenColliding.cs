@@ -25,6 +25,7 @@ public class DieWhenColliding : MonoBehaviour {
 	{
 		if(coll.gameObject.tag == whatTagKillsMe)
 		{
+			if(healthScript!=null)
 			healthScript.health--;
 			if(destroyAfterColliding)
 			Destroy(coll.gameObject);

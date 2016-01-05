@@ -9,6 +9,9 @@ public class TileClicker : MonoBehaviour {
 	private GameObject[] objectsISpawn;
 	private GameObject playerTwo;
 	private MousePlayer secondPlayerScript;
+	private float mousePosition;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +22,8 @@ public class TileClicker : MonoBehaviour {
 	
 	void OnMouseUp()
 	{
-		if (haveISpawned == false && isCharacterOnMe == false && secondPlayerScript.myBuildingPoints >= secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt]) {
+		mousePosition = Input.mousePosition.x;
+		if (mousePosition<Screen.width/2&&haveISpawned == false && isCharacterOnMe == false && secondPlayerScript.myBuildingPoints >= secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt]) {
 			secondPlayerScript.myBuildingPoints = secondPlayerScript.myBuildingPoints - secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt];
 			haveISpawned = true;
 			Instantiate (objectsISpawn [secondPlayerScript.whatToSpawnInt], new Vector3 (this.transform.position.x, (this.transform.position.y + objectsISpawn [secondPlayerScript.whatToSpawnInt].transform.localScale.y + this.transform.localScale.y), this.transform.position.z), Quaternion.identity);
