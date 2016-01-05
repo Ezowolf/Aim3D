@@ -14,7 +14,6 @@ GameObject:
   - 54: {fileID: 5452506}
   - 114: {fileID: 11446732}
   - 114: {fileID: 11411922}
-  - 114: {fileID: 11432086}
   - 114: {fileID: 11457876}
   - 114: {fileID: 11473396}
   m_Layer: 0
@@ -109,20 +108,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatTagKillsMe: Bullet
   destroyAfterColliding: 1
---- !u!114 &11432086
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 182942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c06d9b19f30fa648a4b547faede0af9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 15
-  LooseText: {fileID: 0}
-  displayHealth: {fileID: 0}
 --- !u!114 &11446732
 MonoBehaviour:
   m_ObjectHideFlags: 1
