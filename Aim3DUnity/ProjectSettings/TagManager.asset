@@ -9,6 +9,7 @@ TagManager:
   - WinPickup
   - JumpingPickup
   - SpawnedObject
+  - Tile
   layers:
   - Default
   - TransparentFX

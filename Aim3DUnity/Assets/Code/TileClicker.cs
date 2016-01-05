@@ -3,7 +3,7 @@ using System.Collections;
 
 public class TileClicker : MonoBehaviour {
 
-	private bool haveISpawned = false;
+	public bool haveISpawned = false;
 	private bool isCharacterOnMe = false;
 
 	private GameObject[] objectsISpawn;
@@ -19,11 +19,15 @@ public class TileClicker : MonoBehaviour {
 	
 	void OnMouseUp()
 	{
-		if(haveISpawned==false&&isCharacterOnMe==false&&secondPlayerScript.myBuildingPoints>=secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt])
+		if (haveISpawned == false && isCharacterOnMe == false && secondPlayerScript.myBuildingPoints >= secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt]) {
+			secondPlayerScript.myBuildingPoints = secondPlayerScript.myBuildingPoints - secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt];
+			haveISpawned = true;
+			Instantiate (objectsISpawn [secondPlayerScript.whatToSpawnInt], new Vector3 (this.transform.position.x, (this.transform.position.y + objectsISpawn [secondPlayerScript.whatToSpawnInt].transform.localScale.y + this.transform.localScale.y), this.transform.position.z), Quaternion.identity);
+		} 
+		else 
 		{
-			secondPlayerScript.myBuildingPoints = secondPlayerScript.myBuildingPoints - secondPlayerScript.buildingCosts[secondPlayerScript.whatToSpawnInt];
-			haveISpawned=true;
-			Instantiate(objectsISpawn[secondPlayerScript.whatToSpawnInt],new Vector3(this.transform.position.x,(this.transform.position.y+objectsISpawn[secondPlayerScript.whatToSpawnInt].transform.localScale.y+this.transform.localScale.y),this.transform.position.z),Quaternion.identity);
+			Debug.Log ("Spawned: " + haveISpawned);
+			Debug.Log ("Character: " + isCharacterOnMe);
 		}
 	}
 

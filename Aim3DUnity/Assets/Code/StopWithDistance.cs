@@ -18,6 +18,7 @@ public class StopWithDistance : MonoBehaviour {
 		transformToFollow = GameObject.FindWithTag("Player");
 		stopThis = GetComponent<MoveForward>();
 		shootScript = GetComponent<EnemyShoot>();
+		if(stopThis!=null)
 		originalSpeed = stopThis.moveSpeed;
 	}
 	
