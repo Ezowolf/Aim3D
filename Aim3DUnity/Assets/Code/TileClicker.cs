@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
-public class TileClicker : MonoBehaviour {
+public class TileClicker : MonoBehaviour, IPointerClickHandler {
 
 	public bool haveISpawned = false;
 	private bool isCharacterOnMe = false;
@@ -19,8 +20,8 @@ public class TileClicker : MonoBehaviour {
 		secondPlayerScript = playerTwo.GetComponent<MousePlayer>();
 		objectsISpawn = secondPlayerScript.yourObjectArray;
 	}
-	
-	void OnMouseUp()
+
+	public void OnPointerClick(PointerEventData eventData)
 	{
 		mousePosition = Input.mousePosition.x;
 		if (mousePosition<Screen.width/2&&haveISpawned == false && isCharacterOnMe == false && secondPlayerScript.myBuildingPoints >= secondPlayerScript.buildingCosts [secondPlayerScript.whatToSpawnInt]) {
