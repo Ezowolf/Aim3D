@@ -24,11 +24,6 @@ public class TileClicker : MonoBehaviour {
 			haveISpawned = true;
 			Instantiate (objectsISpawn [secondPlayerScript.whatToSpawnInt], new Vector3 (this.transform.position.x, (this.transform.position.y + objectsISpawn [secondPlayerScript.whatToSpawnInt].transform.localScale.y + this.transform.localScale.y), this.transform.position.z), Quaternion.identity);
 		} 
-		else 
-		{
-			Debug.Log ("Spawned: " + haveISpawned);
-			Debug.Log ("Character: " + isCharacterOnMe);
-		}
 	}
 
 	void OnCollisionEnter(Collision coll)
@@ -37,6 +32,7 @@ public class TileClicker : MonoBehaviour {
 		{
 			isCharacterOnMe = true;
 		}
+			
 	}
 
 	void OnCollisionExit(Collision coll)

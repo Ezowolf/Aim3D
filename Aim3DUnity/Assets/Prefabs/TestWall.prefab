@@ -16,6 +16,7 @@ GameObject:
   - 114: {fileID: 11411922}
   - 114: {fileID: 11432086}
   - 114: {fileID: 11457876}
+  - 114: {fileID: 11473396}
   m_Layer: 0
   m_Name: TestWall
   m_TagString: SpawnedObject
@@ -145,6 +146,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a1ad0a9b5304b8db110a112d01ebf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11473396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58341178c0e614f4b809a74e08552d1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallSpeed: 100
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -192,6 +205,22 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0e572e74e8caf43fca111e2ddf972b49, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: fallSpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 182942}
