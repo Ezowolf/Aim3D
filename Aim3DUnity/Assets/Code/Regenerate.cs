@@ -22,5 +22,6 @@ public class Regenerate : MonoBehaviour {
 		yield return new WaitForSeconds(intervalLength);
 		scriptToEdit.myBuildingPoints = scriptToEdit.myBuildingPoints + addedPoints;
 		StartCoroutine (IntervalCompleter());
+		//Gain X extra points every Y seconds
 	}
 }

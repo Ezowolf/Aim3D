@@ -29,6 +29,7 @@ public class DieWhenColliding : MonoBehaviour {
 			healthScript.health--;
 			if(destroyAfterColliding)
 			Destroy(coll.gameObject);
+			//Substracts health if this object collides with a customisable tag.
 
 		}
 	}

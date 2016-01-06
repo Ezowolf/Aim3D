@@ -10,22 +10,21 @@ public class HealthAndDie : MonoBehaviour {
 	public GameObject LooseText;
 
 	public Text displayHealth;
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (displayHealth != null) {
 			displayHealth.text = "Health: " + health;
+			//In case you want to show the health in the UI
 		}
 	    if(health<=0)
         {
+			//Destroy this object
             Destroy(this.gameObject);
 			if (this.gameObject.tag == "player") 
 			{
 				LooseText.SetActive (true);
+				//If the player dies, the gameover text is shown
 			}
         }
 	}

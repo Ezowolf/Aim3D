@@ -33,11 +33,16 @@ public class PlayerMovement : MonoBehaviour
         rotation *= Time.deltaTime;
         transform.Translate(0, 0, translation);
         transform.Rotate(0, rotation, 0);
+
+		//Walk and rotate the player
+
         if (Input.GetButtonDown("Jump")&&canIJump)
         {
+			//If the player presses space and has a jumping pickup
             if (Physics.Raycast(transform.position, -Vector3.up, 1 + 0.1F) == true)
             {
                 rb.AddForce(transform.up * jumpForce);
+				//Jump
             }
         }
     }
@@ -47,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
 		if (coll.gameObject.tag == "JumpingPickup") {
 			canIJump = true;
 			Destroy (coll.gameObject);
-
+			//Pick up the jumping pickup
 		}
 	}
 }

@@ -10,6 +10,9 @@ public class ShootBullet : MonoBehaviour {
     [SerializeField]
     private float shootingInterval = 1;
 
+	[SerializeField]
+	private Vector3 relativeFiringPosition = new Vector3(0,0,0);
+
 	// Use this for initialization
 	void Start () {
 	
@@ -19,10 +22,13 @@ public class ShootBullet : MonoBehaviour {
 	void Update () {
 	    if(Input.GetButtonDown("Fire1"))
         {
+			//Can i shoot?
             if(canIShoot)
             {
-                Instantiate(bulletToFire, this.transform.position, this.transform.localRotation);
+				//Fires the bullet
+				Instantiate(bulletToFire, this.transform.position+relativeFiringPosition, this.transform.localRotation);
                 canIShoot = false;
+				//Disables the ability to shoot for a customisable anmount of time so the player can't just "mash"
                 StartCoroutine(IntervalCompleter());
             }
             
@@ -31,6 +37,7 @@ public class ShootBullet : MonoBehaviour {
 
     IEnumerator IntervalCompleter()
     {
+		//Ables the player to shoot a bullet again
         yield return new WaitForSeconds(shootingInterval);
         canIShoot = true;
     }

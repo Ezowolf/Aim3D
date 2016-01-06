@@ -28,19 +28,25 @@ public class StopWithDistance : MonoBehaviour {
 		{
 			if(Vector3.Distance(this.transform.position,transformToFollow.transform.position)<=distanceToStopAt)
 			{
+				//If i'm close enough
 				if (stopThis != null) 
 				{
 					stopThis.moveSpeed = 0;
+					//Stop moving
 				}
 				shootScript.amIInRange = true;
+				//Start shooting
 			}
 			else
 			{
 				if (stopThis != null) 
 				{
+					//If i'm no longer close enough
 					stopThis.moveSpeed = originalSpeed;
+					//Start moving again
 				}
 				shootScript.amIInRange = false;
+				//Stop shooting
 			}
 		}
 	}

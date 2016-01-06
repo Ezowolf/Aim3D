@@ -16,11 +16,13 @@ public class EnemyShoot : MonoBehaviour {
 	void Update () {
 		if(amIInRange)
 		{
+			//If i'm close enough to the player
 			if(canIShoot)
 			{
 				Instantiate(bulletToFire, this.transform.position, this.transform.localRotation);
 				canIShoot = false;
 				StartCoroutine(IntervalCompleter());
+				//Starts an interval in which the enemy can not shoot, so that they don't fire an endles stream of bullets.
 			}
 
 		}
@@ -30,5 +32,6 @@ public class EnemyShoot : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(shootingInterval);
 		canIShoot = true;
+		//The enemy can shoot again
 	}
 }

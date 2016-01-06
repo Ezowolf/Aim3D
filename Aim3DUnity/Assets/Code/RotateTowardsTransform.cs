@@ -12,5 +12,6 @@ public class RotateTowardsTransform : MonoBehaviour {
 	void Update () {
 		if(transformToFollow!=null)
 		this.transform.LookAt(transformToFollow.transform);
+		//Rotate towards the player
 	}
 }

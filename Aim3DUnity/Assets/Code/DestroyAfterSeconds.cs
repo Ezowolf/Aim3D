@@ -9,5 +9,6 @@ public class DestroyAfterSeconds : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Destroy(this.gameObject, howManySeconds);
+		//Destroy this object after the anmount of seconds specified in the editor
 	}
 }

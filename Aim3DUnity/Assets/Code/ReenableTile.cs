@@ -14,6 +14,7 @@ public class ReenableTile : MonoBehaviour {
 			haveILanded = true;
 			myTile = coll.gameObject;
 			scriptToEdit = myTile.GetComponent<TileClicker> ();
+			//If i land on a tile, mark this tile as my tile so i can make it clickable again later.
 		}
 	}
 	void OnDestroy()
@@ -21,6 +22,7 @@ public class ReenableTile : MonoBehaviour {
 		if (haveILanded) 
 		{
 			scriptToEdit.haveISpawned = false;
+			//Makes it possible to click the tile again.
 		}
 	}
 }

@@ -49,6 +49,7 @@ public class MousePlayer: MonoBehaviour
 	public void ChangeMySelection(int whatSelection)
 	{
 		whatToSpawnInt = whatSelection;
+		//This changes when player uses the UI
 	}
 	
     void Update()
@@ -56,16 +57,19 @@ public class MousePlayer: MonoBehaviour
         if ((Input.GetAxis("Mouse ScrollWheel") > 0)&& this.transform.position.y < maxYPos)
         {
             transform.Translate((Vector3.up * Time.deltaTime)* 160 * Input.GetAxis("Mouse ScrollWheel") , Space.World);
+			//Zoom in
         }
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0 && this.transform.position.y > minYPos)
         {
             transform.Translate((Vector3.up * Time.deltaTime) * 160 * Input.GetAxis("Mouse ScrollWheel"), Space.World);
+			//Zoom out
         }
         MouseCameraMovement();
 		if (myBuildingPoints > buildingPointsMax) 
 		{
 			myBuildingPoints = buildingPointsMax;
+			//Check to see if building points don't exceed the maximum
 		}
 		buildPointText.text = "BP: " + myBuildingPoints;
 
@@ -85,5 +89,6 @@ public class MousePlayer: MonoBehaviour
         Vector3 pos = camera.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
         Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
         transform.Translate(move, Space.World);
+		//Move based on dragging the mouse when you right click
     }
 }
