@@ -39,11 +39,14 @@ public class MousePlayer: MonoBehaviour
     private Vector3 dragOrigin;
 
 	private GameObject floorObj;
-	
+
+	private GameObject playerObj;
+
     void Start()
     {
         camera = GetComponent<Camera>();
 		floorObj = GameObject.Find("Floor");
+		playerObj = GameObject.FindGameObjectWithTag("Player");
     }
 
 	public void ChangeMySelection(int whatSelection)
@@ -73,6 +76,11 @@ public class MousePlayer: MonoBehaviour
 		}
 		buildPointText.text = "BP: " + myBuildingPoints;
 
+		if (Input.GetMouseButtonDown(2))
+		{
+			this.transform.position = new Vector3 (playerObj.transform.position.x+12, 22, this.transform.position.z+12);
+		}
+
     }
 
     void MouseCameraMovement()
@@ -90,5 +98,6 @@ public class MousePlayer: MonoBehaviour
         Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
         transform.Translate(move, Space.World);
 		//Move based on dragging the mouse when you right click
+
     }
 }
