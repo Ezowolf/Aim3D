@@ -54,5 +54,8 @@ public class PlayerMovement : MonoBehaviour
 			Destroy (coll.gameObject);
 			//Pick up the jumping pickup
 		}
+		if (coll.gameObject.tag == "WinPickup") {
+			Debug.Log ("PLAYER 1 WINS");
+		}
 	}
 }

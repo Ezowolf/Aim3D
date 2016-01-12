@@ -1,22 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class Timer : HealthAndDie {
+public class Timer : MonoBehaviour {
 
-	public float timeLeft = 8.0f;
+	[SerializeField]
+	private float timeLeft = 8.0f;
+
+	[SerializeField]
+	private Text timerText;
 	
 	void Update()
 	{
-		//Debug.Log (timeLeft);
-		timeLeft -= Time.deltaTime;
-		if(timeLeft < 0)
+		if (timeLeft <= 0) 
 		{
-			GameOver();
+			GameOver ();
+		} 
+		else 
+		{
+			timeLeft -= Time.deltaTime;
+			timerText.text = (""+Mathf.Round(timeLeft));
 		}
 	}
 
 	public void GameOver(){
-		Destroy(this.gameObject);
-		LooseText.SetActive(true);
+		Debug.Log ("PLAYER 2 WINS");
 	}
 }
