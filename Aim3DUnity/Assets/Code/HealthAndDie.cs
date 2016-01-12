@@ -15,6 +15,7 @@ public class HealthAndDie : MonoBehaviour {
 	void Update () {
 		if (displayHealth != null) {
 			displayHealth.text = "Health: " + health;
+			HealthUIChanger.uIstate = health;
 			//In case you want to show the health in the UI
 		}
 	    if(health<=0)

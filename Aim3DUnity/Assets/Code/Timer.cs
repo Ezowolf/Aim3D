@@ -7,7 +7,7 @@ public class Timer : HealthAndDie {
 	
 	void Update()
 	{
-		Debug.Log (timeLeft);
+		//Debug.Log (timeLeft);
 		timeLeft -= Time.deltaTime;
 		if(timeLeft < 0)
 		{

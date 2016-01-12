@@ -41,7 +41,7 @@ public class TileClicker : MonoBehaviour, IPointerClickHandler {
 			isCharacterOnMe = true;
 			//A character is on me, so don't spawn anything on this tile
 		}
-			
+
 	}
 
 	void OnCollisionExit(Collision coll)
