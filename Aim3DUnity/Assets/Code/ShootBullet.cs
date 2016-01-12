@@ -13,6 +13,12 @@ public class ShootBullet : MonoBehaviour {
 	[SerializeField]
 	private Vector3 relativeFiringPosition = new Vector3(0,0,0);
 
+	[SerializeField]
+	private AudioSource laserShot;
+
+	[SerializeField]
+	private AudioClip laserSound;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -26,6 +32,7 @@ public class ShootBullet : MonoBehaviour {
             if(canIShoot)
             {
 				//Fires the bullet
+				laserShot.PlayOneShot(laserSound);
 				Instantiate(bulletToFire, this.transform.position+relativeFiringPosition, this.transform.localRotation);
                 canIShoot = false;
 				//Disables the ability to shoot for a customisable anmount of time so the player can't just "mash"

@@ -9,14 +9,11 @@ public class HealthAndDie : MonoBehaviour {
 	private bool died = false;
 	public GameObject LooseText;
 
-	public Text displayHealth;
-	
 	// Update is called once per frame
 	void Update () {
-		if (displayHealth != null) {
-			displayHealth.text = "Health: " + health;
+			
+		if (this.gameObject.name == "PlayableCharacter") {
 			HealthUIChanger.uIstate = health;
-			//In case you want to show the health in the UI
 		}
 	    if(health<=0)
         {

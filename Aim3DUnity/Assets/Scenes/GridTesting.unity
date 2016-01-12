@@ -827,7 +827,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -274.03, y: -208.6}
+  m_AnchoredPosition: {x: -322.7, y: -200.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700920058
@@ -856,7 +856,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletToFire: {fileID: 194340, guid: c29587d3a765748428785b9db581f29c, type: 2}
   shootingInterval: 0.5
-  relativeFiringPosition: {x: 0, y: 0, z: 1}
+  relativeFiringPosition: {x: 1, y: 1, z: 1}
 --- !u!114 &1704681993
 MonoBehaviour:
   m_ObjectHideFlags: 0
