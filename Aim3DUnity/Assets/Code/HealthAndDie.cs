@@ -8,6 +8,8 @@ public class HealthAndDie : MonoBehaviour {
 
 	private bool died = false;
 	public GameObject LooseText;
+	[SerializeField]
+	private GameObject dieParticle;
 
 	// Update is called once per frame
 	void Update () {
@@ -25,5 +27,11 @@ public class HealthAndDie : MonoBehaviour {
 				//If the player dies, the gameover text is shown
 			}
         }
+	}
+
+	void OnDestroy()
+	{
+		if(dieParticle!=null)
+		Instantiate (dieParticle);
 	}
 }
