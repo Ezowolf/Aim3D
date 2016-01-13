@@ -7,7 +7,7 @@ public class ChangeToWinTile : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.tag == "WinningPickup") 
+		if (other.gameObject.tag == "WinPickup") 
 		{
 			Instantiate (winTile);
 			Destroy (this.gameObject);

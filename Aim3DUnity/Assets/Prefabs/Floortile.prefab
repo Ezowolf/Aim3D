@@ -13,6 +13,7 @@ GameObject:
   - 95: {fileID: 9527614}
   - 114: {fileID: 11427980}
   - 82: {fileID: 8224344}
+  - 114: {fileID: 11480826}
   m_Layer: 0
   m_Name: Floortile
   m_TagString: Untagged
@@ -168,8 +169,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveISpawned: 0
-  placeSource: {fileID: 8224344}
-  placeSound: {fileID: 8300000, guid: f8b7b5dbb487c47dc99988f0d5fe9288, type: 3}
+--- !u!114 &11480826
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 141858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03a19b0b6a6334cde8b657b35a85df24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winTile: {fileID: 142116, guid: 81544bbe491394713b07b317c3989754, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -201,6 +212,10 @@ Prefab:
       propertyPath: placeSound
       value: 
       objectReference: {fileID: 8300000, guid: f8b7b5dbb487c47dc99988f0d5fe9288, type: 3}
+    - target: {fileID: 0}
+      propertyPath: winTile
+      value: 
+      objectReference: {fileID: 142116, guid: 81544bbe491394713b07b317c3989754, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141858}
