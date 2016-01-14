@@ -12,13 +12,35 @@ public class TileClicker : MonoBehaviour, IPointerClickHandler {
 	private MousePlayer secondPlayerScript;
 	private float mousePosition;
 
+	[SerializeField]
+	private float tileID;
 
+	[SerializeField]
+	private float[] toFillIDs;
+
+	[SerializeField]
+	private GameObject unbreakableWall;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		playerTwo = GameObject.Find("MousePlayer");
 		secondPlayerScript = playerTwo.GetComponent<MousePlayer>();
 		objectsISpawn = secondPlayerScript.yourObjectArray;
+		tileID = GridSystem.tileCounter;
+		GridSystem.tileCounter++;
+	}
+
+	void Start()
+	{
+		foreach (float fillID in toFillIDs) 
+		{
+			if (fillID == tileID) 
+			{
+				Debug.Log ("yah");
+				haveISpawned = true;
+				Instantiate (unbreakableWall, new Vector3 (this.transform.position.x, (this.transform.position.y + unbreakableWall.transform.localScale.y + this.transform.localScale.y),this.transform.position.z), Quaternion.identity);
+			}
+		}
 	}
 
 	public void OnPointerClick(PointerEventData eventData)

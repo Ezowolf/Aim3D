@@ -3,6 +3,7 @@ using System.Collections;
 
 public class GridSystem : MonoBehaviour {
 
+
 	[SerializeField]
 	private int xGridSize = 25;
 
@@ -17,6 +18,8 @@ public class GridSystem : MonoBehaviour {
 
 	[SerializeField]
 	private GameObject gridTile;
+
+	public static int tileCounter = 0;
 
 
 	[SerializeField]
