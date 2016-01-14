@@ -10,10 +10,8 @@ GameObject:
   - 4: {fileID: 445336}
   - 95: {fileID: 9508204}
   - 65: {fileID: 6558600}
-  - 114: {fileID: 11466042}
   - 114: {fileID: 11400894}
   - 114: {fileID: 11445424}
-  - 114: {fileID: 11483640}
   - 114: {fileID: 11474416}
   - 54: {fileID: 5463100}
   m_Layer: 0
@@ -364,18 +362,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatTagKillsMe: Bullet
   destroyAfterColliding: 1
---- !u!114 &11466042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58341178c0e614f4b809a74e08552d1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 200
 --- !u!114 &11474416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,19 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   LooseText: {fileID: 0}
-  displayHealth: {fileID: 0}
---- !u!114 &11483640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 124914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3aefd8b4bcec62e4ba3e63dcffe7d98a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  howManySeconds: 120
+  dieParticle: {fileID: 112884, guid: 0657bbc5568a9499a89009cef86e450e, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -421,6 +395,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0.4
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dieParticle
+      value: 
+      objectReference: {fileID: 112884, guid: 0657bbc5568a9499a89009cef86e450e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 124914}

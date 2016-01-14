@@ -19,6 +19,9 @@ public class ShootBullet : MonoBehaviour {
 	[SerializeField]
 	private AudioClip laserSound;
 
+	[SerializeField]
+	private Quaternion pos;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -33,7 +36,7 @@ public class ShootBullet : MonoBehaviour {
             {
 				//Fires the bullet
 				laserShot.PlayOneShot(laserSound);
-				Instantiate(bulletToFire, this.transform.position+relativeFiringPosition, this.transform.localRotation);
+				GameObject go = Instantiate(bulletToFire, this.transform.position+relativeFiringPosition, this.transform.localRotation) as GameObject;
                 canIShoot = false;
 				//Disables the ability to shoot for a customisable anmount of time so the player can't just "mash"
                 StartCoroutine(IntervalCompleter());

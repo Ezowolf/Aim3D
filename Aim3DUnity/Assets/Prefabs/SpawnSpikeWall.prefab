@@ -13,10 +13,10 @@ GameObject:
   - 95: {fileID: 9531058}
   - 65: {fileID: 6536478}
   - 114: {fileID: 11413246}
-  - 114: {fileID: 11414752}
   - 114: {fileID: 11474408}
   - 114: {fileID: 11496460}
   - 82: {fileID: 8247718}
+  - 114: {fileID: 11416760}
   m_Layer: 0
   m_Name: SpawnSpikeWall
   m_TagString: SpawnedObject
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a1ad0a9b5304b8db110a112d01ebf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11414752
+--- !u!114 &11416760
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aefd8b4bcec62e4ba3e63dcffe7d98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  howManySeconds: 120
+  howManySeconds: 20
 --- !u!114 &11496460
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c06d9b19f30fa648a4b547faede0af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 9999
   LooseText: {fileID: 0}
   dieParticle: {fileID: 0}
 --- !u!1001 &100100000
@@ -250,6 +250,22 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
       value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: howManySeconds
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 9999
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: whatTagKillsMe
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: destroyAfterColliding
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

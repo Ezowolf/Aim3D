@@ -9,6 +9,9 @@ public class Timer : MonoBehaviour {
 
 	[SerializeField]
 	private Text timerText;
+
+	[SerializeField]
+	private Text timerText2;
 	
 	void Update()
 	{
@@ -20,6 +23,7 @@ public class Timer : MonoBehaviour {
 		{
 			timeLeft -= Time.deltaTime;
 			timerText.text = (""+Mathf.Round(timeLeft));
+			timerText2.text = (""+Mathf.Round(timeLeft));
 		}
 	}
 

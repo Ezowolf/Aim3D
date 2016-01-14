@@ -74,7 +74,7 @@ public class MousePlayer: MonoBehaviour
 			myBuildingPoints = buildingPointsMax;
 			//Check to see if building points don't exceed the maximum
 		}
-		buildPointText.text = "BP: " + myBuildingPoints;
+		buildPointText.text = "BP: " + myBuildingPoints+"/"+buildingPointsMax;
 
 		if (Input.GetMouseButtonDown(2))
 		{

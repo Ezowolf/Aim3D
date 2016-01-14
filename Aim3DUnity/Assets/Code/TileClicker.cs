@@ -36,7 +36,6 @@ public class TileClicker : MonoBehaviour, IPointerClickHandler {
 		{
 			if (fillID == tileID) 
 			{
-				Debug.Log ("yah");
 				haveISpawned = true;
 				Instantiate (unbreakableWall, new Vector3 (this.transform.position.x, (this.transform.position.y + unbreakableWall.transform.localScale.y + this.transform.localScale.y),this.transform.position.z), Quaternion.identity);
 			}
