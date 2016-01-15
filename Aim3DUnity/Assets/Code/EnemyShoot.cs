@@ -38,7 +38,7 @@ public class EnemyShoot : MonoBehaviour {
 				Instantiate(bulletToFire, this.transform.position, this.transform.localRotation);
 				canIShoot = false;
 				StartCoroutine(IntervalCompleter());
-				//Starts an interval in which the enemy can not shoot, so that they don't fire an endles stream of bullets.
+				//Starts an interval in which the enemy can not shoot, so that they don't fire an endless stream of bullets.
 			}
 
 		}

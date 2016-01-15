@@ -19,8 +19,14 @@ public class ShootBullet : MonoBehaviour {
 	[SerializeField]
 	private AudioClip laserSound;
 
+<<<<<<< Updated upstream
 	[SerializeField]
 	private Quaternion pos;
+=======
+
+	public GameObject bullet;
+	public Transform barrelEnd;
+>>>>>>> Stashed changes
 
 	// Use this for initialization
 	void Start () {
