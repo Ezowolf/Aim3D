@@ -1658,6 +1658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   bulletToFire: {fileID: 100000, guid: 8d9a0e193e8974cad877f3ed2a4a5f8f, type: 3}
   shootingInterval: 0.5
 =======
@@ -1665,6 +1666,11 @@ MonoBehaviour:
   shootingInterval: .5
 >>>>>>> Stashed changes
   relativeFiringPosition: {x: 0, y: 0, z: 2}
+=======
+  bulletToFire: {fileID: 194340, guid: c29587d3a765748428785b9db581f29c, type: 2}
+  shootingInterval: 0.5
+  relativeFiringPosition: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
   laserShot: {fileID: 1704681999}
   laserSound: {fileID: 8300000, guid: a94341c5f96c9487ab2297690ec61b21, type: 3}
   pos: {x: 0, y: 0, z: 0, w: 0}
@@ -2002,19 +2008,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489166, guid: ade3d95cf36ec400d9843b52663ffc64, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 489166, guid: ade3d95cf36ec400d9843b52663ffc64, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 489166, guid: ade3d95cf36ec400d9843b52663ffc64, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 489166, guid: ade3d95cf36ec400d9843b52663ffc64, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.75
+      value: 0.57
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ade3d95cf36ec400d9843b52663ffc64, type: 2}
