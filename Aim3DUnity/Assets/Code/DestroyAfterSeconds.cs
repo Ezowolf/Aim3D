@@ -11,13 +11,4 @@ public class DestroyAfterSeconds : MonoBehaviour {
         Destroy(this.gameObject, howManySeconds);
 		//Destroy this object after the anmount of seconds specified in the editor
 	}
-	/*
-	void Update () {
-		OnCollisionEnter ();
-	}
-
-	void OnCollisionEnter () {
-		Destroy (this.gameObject);
-	}
-	*/
 }

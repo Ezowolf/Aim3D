@@ -58,7 +58,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167356}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -70,8 +70,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 159902}
-  m_LocalRotation: {x: -0.19248891, y: -0.6972712, z: 0.18374097, w: 0.66558266}
-  m_LocalPosition: {x: -0.029883062, y: 1.4226099, z: 2.2459264}
+  m_LocalRotation: {x: -.192488909, y: -.697271228, z: .183740973, w: .665582657}
+  m_LocalPosition: {x: -.0298830625, y: 1.42260993, z: 2.24592638}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 463194}
@@ -83,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 332.65057, y: 8978.089, z: -3139.3557}
+  m_LocalPosition: {x: 152.272842, y: 56.009655, z: 222.902466}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 453846}
@@ -100,7 +100,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6feedf0000eb047fc9acb361375ea411, type: 2}
+  - {fileID: 2100000, guid: f6a5a8d61d3eb4c1ca86c39b53dea2ad, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -111,7 +111,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
@@ -185,8 +185,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.091861725
-  m_Height: 1.3444176
+  m_Radius: .0918617249
+  m_Height: 1.34441757
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &100100000
