@@ -19,13 +19,18 @@ public class HealthAndDie : MonoBehaviour {
 		}
 	    if(health<=0)
         {
-			//Destroy this object
-            Destroy(this.gameObject);
-			if (this.gameObject.tag == "player") 
-			{
-				LooseText.SetActive (true);
-				//If the player dies, the gameover text is shown
-			}
+            //Destroy this object
+
+            if (this.gameObject.tag == "Player")
+            {
+                Application.LoadLevel("MousePlayerWin");
+                //If the player dies, the gameover text is shown
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+           
         }
 	}
 

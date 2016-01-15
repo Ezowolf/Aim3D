@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
 			//Pick up the jumping pickup
 		}
 		if (coll.gameObject.tag == "WinPickup") {
-			Debug.Log ("PLAYER 1 WINS");
-		}
+            Application.LoadLevel("ControllerPlayerWin");
+        }
 	}
 }

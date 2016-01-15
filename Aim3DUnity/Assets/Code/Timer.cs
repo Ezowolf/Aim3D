@@ -28,6 +28,6 @@ public class Timer : MonoBehaviour {
 	}
 
 	public void GameOver(){
-		Debug.Log ("PLAYER 2 WINS");
-	}
+        Application.LoadLevel("MousePlayerWin");
+    }
 }

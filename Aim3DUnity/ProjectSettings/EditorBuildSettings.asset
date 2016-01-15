@@ -13,3 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SebasScene.unity
   - enabled: 1
     path: Assets/Scenes/GridTesting.unity
+  - enabled: 1
+    path: Assets/Scenes/MousePlayerWin.unity
+  - enabled: 1
+    path: Assets/Scenes/ControllerPlayerWin.unity
