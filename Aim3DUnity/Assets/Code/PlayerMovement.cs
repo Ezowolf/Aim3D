@@ -3,6 +3,11 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+	private Vector3 oldVector;
+
+	public Vector3 playerChange;
+
     [SerializeField]
     private float speed = 10.0F;
     [SerializeField]
@@ -27,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerMove()
     {
+		oldVector = this.transform.position;
         float translation = Input.GetAxis("Vertical") * speed;
         float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
         translation *= Time.deltaTime;
@@ -45,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 				//Jump
             }
         }
+		playerChange = this.transform.position - oldVector;
     }
 
     void OnTriggerEnter(Collider coll)

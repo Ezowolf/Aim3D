@@ -22,13 +22,18 @@ public class EnemyShoot : MonoBehaviour {
 	[SerializeField]
 	private AudioClip spawnSound;
 
+	private GameObject playerObject;
+	private PlayerMovement movementScript;
 
 	void Start()
 	{
 		laserShot.PlayOneShot (spawnSound);
+		playerObject = GameObject.FindGameObjectWithTag ("Player");
+		movementScript = playerObject.GetComponent<PlayerMovement> ();
 	}
 
 	void Update () {
+		Debug.Log (movementScript.playerChange);
 		if(amIInRange)
 		{
 			//If i'm close enough to the player
