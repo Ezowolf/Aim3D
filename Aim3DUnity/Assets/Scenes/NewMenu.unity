@@ -162,6 +162,7 @@ MonoBehaviour:
   state3Sprite: {fileID: 21300000, guid: 14b8d500e084146df8cc0f76fbd21e45, type: 3}
   creditsScreenSprite: {fileID: 21300000, guid: 0ff3189ecfd1c46108fba2d932f9a26b,
     type: 3}
+  howToPlayScreen: {fileID: 21300000, guid: edb5e6388415b49a5b0b4ba79a8fa04e, type: 3}
   title: {fileID: 1032803166}
 --- !u!114 &173566174
 MonoBehaviour:

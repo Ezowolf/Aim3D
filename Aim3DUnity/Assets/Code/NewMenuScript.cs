@@ -21,6 +21,9 @@ public class NewMenuScript : MonoBehaviour {
 	[SerializeField]
 	private Sprite creditsScreenSprite;
 
+	[SerializeField]
+	private Sprite howToPlayScreen;
+
 	private ChangeScene sceneChanger;
 
 	[SerializeField]
@@ -79,8 +82,11 @@ public class NewMenuScript : MonoBehaviour {
 		else 
 		{
 			title.SetActive (false);
-			if (state == 2) {
+			if (state == 3) {
 				spriteRenderer.sprite = creditsScreenSprite;
+			}
+			if (state == 2) {
+				spriteRenderer.sprite = howToPlayScreen;
 			}
 			if (Input.GetKeyDown (KeyCode.Escape)) 
 			{
