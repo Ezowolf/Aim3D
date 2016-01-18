@@ -1025,7 +1025,7 @@ GameObject:
   - 114: {fileID: 11439852}
   - 114: {fileID: 11434480}
   - 82: {fileID: 8295018}
-  - 65: {fileID: 6592684}
+  - 136: {fileID: 13602946}
   m_Layer: 0
   m_Name: SpawnEnemy
   m_TagString: Untagged
@@ -2607,8 +2607,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -183.75607, y: -2889.798, z: 437.47656}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 706.93866, y: 389.5602, z: 562.2467}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 463746}
   - {fileID: 465878}
@@ -5356,18 +5356,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 116368}
   m_Mesh: {fileID: 4300136, guid: d171916f5fe2e4fbab6eacc919826cf8, type: 3}
---- !u!65 &6592684
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 162800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1713312, y: 8.545637, z: 1.3402756}
-  m_Center: {x: -0.5900489, y: 3.772705, z: 0.1701555}
 --- !u!82 &8295018
 AudioSource:
   m_ObjectHideFlags: 1
@@ -5470,7 +5458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c06d9b19f30fa648a4b547faede0af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
   LooseText: {fileID: 0}
   dieParticle: {fileID: 139706, guid: a08e848c7ce844691a177ad78190e20a, type: 2}
 --- !u!114 &11434480
@@ -5527,6 +5515,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whatTagKillsMe: Bullet
   destroyAfterColliding: 1
+--- !u!136 &13602946
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.1419373
+  m_Height: 11.849125
+  m_Direction: 1
+  m_Center: {x: 0, y: 4.3, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -5538,6 +5539,22 @@ Prefab:
       propertyPath: dieParticle
       value: 
       objectReference: {fileID: 139706, guid: a08e848c7ce844691a177ad78190e20a, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: health
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 162800}
