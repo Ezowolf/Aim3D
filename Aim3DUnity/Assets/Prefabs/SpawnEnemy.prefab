@@ -5472,7 +5472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   LooseText: {fileID: 0}
-  dieParticle: {fileID: 112884, guid: 0657bbc5568a9499a89009cef86e450e, type: 2}
+  dieParticle: {fileID: 139706, guid: a08e848c7ce844691a177ad78190e20a, type: 2}
 --- !u!114 &11434480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5533,7 +5533,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: dieParticle
+      value: 
+      objectReference: {fileID: 139706, guid: a08e848c7ce844691a177ad78190e20a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 162800}

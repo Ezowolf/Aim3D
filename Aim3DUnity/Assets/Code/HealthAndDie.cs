@@ -37,6 +37,6 @@ public class HealthAndDie : MonoBehaviour {
 	void OnDestroy()
 	{
 		if(dieParticle!=null)
-		Instantiate (dieParticle);
+			Instantiate (dieParticle,this.transform.position,Quaternion.identity);
 	}
 }
